@@ -5,6 +5,7 @@ export const NewsContext = createContext();
 
 export const NewsContextProvider = (props) => {
   const [data, setData] = useState();
+  const [dataCategory ] = useState('');
 
   useEffect(() => {
     axios
@@ -12,6 +13,15 @@ export const NewsContextProvider = (props) => {
         `http://newsapi.org/v2/top-headlines?country=us&from=2020-10-21&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_SECRET_KEY}`
       )
       .then((response) => setData(response.data))
+      .catch((error) => console.log(error));
+  }, []);
+  
+  useEffect(() => {
+    axios
+      .get(
+        `http://newsapi.org/v2/top-headlines?country=us&category=${dataCategory}&apiKey=${process.env.REACT_APP_NEWS_API_SECRET_KEY}`
+      )
+      .then((response) => setData(response.dataCategory))
       .catch((error) => console.log(error));
   }, []);
 

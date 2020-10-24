@@ -1,15 +1,24 @@
-import React from "react";
-//import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { NewsContext } from "../NewsContext";
+import Header from "./Header";
 
-export default function Details({data}) {
-  console.log(data);
+export default function Details({ match, history, location }) {
+  const { data } = useContext(NewsContext);
+  console.log(data, history, location);
+  // const news = data?.articles?.find(n => n.title === selectedNews);
+  const news = data?.articles.find((n) => n.title === match.params.url);
+  let linkedHandle = news?.url;
   return (
     <div>
-      <h1 className="head__text">Details</h1>
-      <hr className="cover-lines"></hr>
-      <div className="all__news">
-        <hr className="cover-lines"></hr>
-      </div>
+      <Header />
+      <article className="details">
+        <h1 className="details__title">{news?.title}</h1>
+        <p className="details__desc">{news?.description}</p>
+        <img className="news__image" src={news?.urlToImage} alt="new"></img>
+        <span className="details__author">{news?.author}</span> <br />
+        <div className="details__content">{news?.content}</div>
+        <a href={linkedHandle}>See Original Source</a>
+      </article>
     </div>
   );
 }
