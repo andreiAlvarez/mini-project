@@ -16,7 +16,7 @@ export default function CategoriesBar(props) {
       {categories.map((category, index) => {
         return (
           <Link key={index} to={`/category/${category}`}>
-            <h4>{category}</h4>
+            <h4 className="category-alone">{category}</h4>
           </Link>
         );
       })}

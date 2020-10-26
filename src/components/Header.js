@@ -5,7 +5,7 @@ import moment from "moment";
 
 export default function Header() {
   const [search, setSearch] = useState("")
-  let dateCreate = moment().format("dddd, MMMM DD, YYYY");
+  let dateCreate = moment().format("ddd, MMMM DD, YYYY");
 
   const handleChange = (event) => {
     setSearch(event.target.value);
@@ -18,13 +18,13 @@ export default function Header() {
 
   return (
     <div className="header">
-      <p>{dateCreate}</p>
+      <p className="date">{dateCreate}</p>
       <Link to="/" className="logo">
         <img id="header__image" src={headerImage} alt="img"></img>
       </Link>
-      <form onSubmit={handleSubmit}>
-        <input name="search" onChange={handleChange} />
-        <button>Search</button>
+      <form className="search-form" onSubmit={handleSubmit}>
+        <input className="search-input" placeholder="   Search:" name="search" onChange={handleChange} />
+        {/* <button className="search-button">Go</button> */}
       </form>
     </div>
   );

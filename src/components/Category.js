@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NewsArticle from "./NewsArticle";
 import NewsApi from "../services/NewsApi";
-//import Header from "./Header";
+import CategoriesBar from "./CategoriesBar";
 
 export default function Category(props) {
   let { categ, term } = useParams();
-  const [news, setNews] = useState([]);
+  const [news, setNews, setSelectedNews] = useState([]);
   const newsApi = new NewsApi();
 
   useEffect(() => {
@@ -23,7 +23,8 @@ export default function Category(props) {
         setNews(resp.data.articles);
       });
     }
-  }, []);
+    // eslint-disable-next-line
+  },[]);
 
   const renderTerm = () => {
     let label = ""
@@ -41,9 +42,9 @@ export default function Category(props) {
 
   return (
     <div>
-      {/* <Header /> */}
+    <CategoriesBar />
       <div>
-        <h2>{renderTerm()}:</h2>
+        <h2 className="category-upper">{renderTerm()}:</h2>
         <br/>
       </div>
       <div className="all__news">
@@ -53,7 +54,7 @@ export default function Category(props) {
                 data={item}
                 key={item.url}
                 {...props}
-                setSelectedNews={() => {}}
+                setSelectedNews={setSelectedNews}
               />
             ))
           : "Loading"}
