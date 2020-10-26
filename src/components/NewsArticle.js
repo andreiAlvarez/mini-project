@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import slugify from "slugify"
 
 function NewsArticle({ data, setSelectedNews, history }) {
   console.log(data);
@@ -15,7 +16,7 @@ function NewsArticle({ data, setSelectedNews, history }) {
         <span className="news__published">{data.publishedAt}</span>
       </div>
       <div className="news-everything">
-        <Link to={`/details/${data.title}`}>
+        <Link to={`/details/${slugify(data.title)}`}>
           <h1 className="news__title">{data.title}</h1>
         </Link>
         <p className="news__desc">{data.description}</p>

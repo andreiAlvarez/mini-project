@@ -1,11 +1,7 @@
-import React, { useContext } from "react";
-import { NewsContext } from "../NewsContext";
+import React from "react";
 import { Link } from "react-router-dom";
-//import Category from "./Category";
 
 export default function CategoriesBar(props) {
-  let { dataCategory } = useContext(NewsContext);
- 
   const categories = [
     "technology",
     "sports",
@@ -14,18 +10,13 @@ export default function CategoriesBar(props) {
     "entertainment",
     "business",
   ];
-
-  function handleCategories(event) {
-    return dataCategory = event.target.value;
-  }
   
-  console.log(dataCategory);
   return (
-    <div>
-      {categories.map((category) => {
+    <div className="main-menu">
+      {categories.map((category, index) => {
         return (
-          <Link to={`/category/${category}`}>
-            <h4 onClick={handleCategories}>{category}</h4>
+          <Link key={index} to={`/category/${category}`}>
+            <h4>{category}</h4>
           </Link>
         );
       })}

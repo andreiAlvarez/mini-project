@@ -1,27 +1,59 @@
-import React, { useContext } from "react";
-import { NewsContext } from "../NewsContext";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import NewsArticle from "./NewsArticle";
+import NewsApi from "../services/NewsApi";
 //import Header from "./Header";
 
 export default function Category(props) {
-  const { dataCategory, setSelectedNews } = useContext(NewsContext);
-  console.log(dataCategory);
+  let { categ, term } = useParams();
+  const [news, setNews] = useState([]);
+  const newsApi = new NewsApi();
+
+  useEffect(() => {
+    if(categ) {
+      newsApi.getNewsByCategory(categ).then((resp) => {
+        console.log("RESPONSE", resp.data.articles);
+        setNews(resp.data.articles);
+      });
+    }
+
+    if(term) {
+      newsApi.search(term).then((resp) => {
+        console.log("RESPONSE", resp.data.articles);
+        setNews(resp.data.articles);
+      });
+    }
+  }, []);
+
+  const renderTerm = () => {
+    let label = ""
+
+    if(categ) {
+      label = `Category ${categ}`
+    }
+
+    if(term) {
+      label = `Search by ${term}`
+    }
+
+    return label
+  }
 
   return (
     <div>
       {/* <Header /> */}
       <div>
-        <h2>{dataCategory}:</h2>
+        <h2>{renderTerm()}:</h2>
+        <br/>
       </div>
-      <hr className="cover-lines"></hr>
       <div className="all__news">
-        {dataCategory
-          ? dataCategory.articles.map((news) => (
+        {news
+          ? news.map((item) => (
               <NewsArticle
-                data={news}
-                key={news.url}
+                data={item}
+                key={item.url}
                 {...props}
-                setSelectedNews={setSelectedNews}
+                setSelectedNews={() => {}}
               />
             ))
           : "Loading"}

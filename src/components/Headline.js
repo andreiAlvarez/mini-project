@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import slugify from "slugify"
 
 export function Headline({ data }) {
   console.log(data);
@@ -9,7 +10,7 @@ export function Headline({ data }) {
         <img className="headlines__image" src={data.urlToImage} alt="new"></img>
       </div>
       <div className="news__everything__headlines">
-        <Link to={`/details/${data.title}`}>
+        <Link to={`/details/${slugify(data.title)}`}>
           <h1 className="news__title__head">{data.title}</h1>
         </Link>
         <p className="news__desc__head">{data.description}</p>

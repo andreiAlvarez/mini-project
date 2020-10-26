@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { NewsContext } from "../NewsContext";
 import { Headline } from "./Headline";
 import NewsArticle from "./NewsArticle";
-import Header from "./Header";
+//import Header from "./Header";
 import CategoriesBar from "./CategoriesBar";
 
 function News(props) {
@@ -11,9 +11,7 @@ function News(props) {
 
   return (
     <div>
-      <Header />
       <CategoriesBar />
-      <hr className="cover-lines"></hr>
       <div className="all__news">
         {data
           ? data.articles.map((news, index) =>
