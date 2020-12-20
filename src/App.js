@@ -14,9 +14,9 @@ function App() {
       <NewsContextProvider>
         <Switch>
           <Route exact path="/" component={News} />
-          <Route path="/details/:url" component={Details} />
           <Route path="/category/:categ" component={Category} />
           <Route path="/search/:term" component={Category} />
+          <Route path="/details/:url" component={Details} />
         </Switch>
       </NewsContextProvider>
     </div>
