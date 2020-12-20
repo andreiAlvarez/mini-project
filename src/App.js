@@ -6,6 +6,7 @@ import Category from "./components/Category";
 import News from "./components/News";
 import "./App.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/details/:url" component={Details} />
         </Switch>
       </NewsContextProvider>
+      <Footer/>
     </div>
   );
 }
