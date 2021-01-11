@@ -66,6 +66,25 @@
   margin: 0.5vh;
 }
 
+#footer__image {
+  width: 100vw;
+  height: auto;
+}
+
+.footer {
+position: relative;
+text-align: center;
+color: white;
+}
+
+h5 {
+  position: absolute;
+  bottom: 1vh;
+  left: 39vw;
+  font-size: 2vh;
+}
+
+
 
   .all__news {
     width: 180vw;
