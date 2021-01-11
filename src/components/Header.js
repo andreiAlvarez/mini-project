@@ -18,24 +18,23 @@ export default function Header() {
 
   return (
     <section className="header">
-    <div className="header-one">
-       <Link to="/" className="logo">
-        <img id="header__image" src={headerImage} alt="img"></img>
-      </Link>
-    </div>
-
-
-      <p className="date">{dateCreate}</p>
-     
-      <form className="search-form" onSubmit={handleSubmit}>
-        <input
-          className="search-input"
-          placeholder="   Search:"
-          name="search"
-          onChange={handleChange}
-        />
-        {/* <button className="search-button">Go</button> */}
-      </form>
+      <div className="header-one">
+        <Link to="/" className="logo">
+          <img id="header__image" src={headerImage} alt="img"></img>
+        </Link>
+      </div>
+      <div className="search-bar">
+       <p className="date">{dateCreate}</p>
+        <form className="search-form" onSubmit={handleSubmit}>
+          <input
+            className="search-input"
+            placeholder="   Search:"
+            name="search"
+            onChange={handleChange}
+          />
+          <button className="search-button">Go</button>
+        </form>
+      </div>
     </section>
   );
 }
