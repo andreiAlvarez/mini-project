@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import headerImage from "../images/Ironhack Post.png";
 import moment from "moment";
 
 export default function Header() {
