@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import headerImage from "../images/Ironhack Post.png";
+// import headerImage from "../images/Ironhack Post.png";
 import moment from "moment";
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
     <section className="header">
       <div className="header-one">
         <Link to="/" className="logo">
-          <img id="header__image" src={headerImage} alt="img"></img>
+          <h1 className="newspaper-head">The Ironhack Post</h1>
         </Link>
       </div>
       <div className="search-bar">

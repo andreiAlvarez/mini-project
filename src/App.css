@@ -7,24 +7,32 @@
 .header {
   width: 100vw;
   height: auto;
-  margin-top: 1vw;
   display: flex;
   flex-direction: column;
   padding-top: 3vh;
   padding-bottom: 1vh;
   align-items: center;
+  background-image: url("./images/News-footer\ \(2\).jpg");
+  background-size: cover;
+  
+}
+
+.newspaper-head {
+  color: rgb(255, 255, 255);
+  text-transform: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 8vw;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.logo {
+text-decoration: none;
 }
 
 .header-one {
   display: flex;
   justify-content: center;
-}
-
-.logo  {
-  display: flex;
-  align-items: center;
-  width: 80vw;
-  height: auto;
 }
 
 #header__image {
@@ -34,9 +42,11 @@
 }
 
 .date {
-  width: 41vw;
-  font-size: 4vw;
+  width: 50vw;
+  font-size: 5vw;
   padding-bottom: 1vh;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
 }
 
 .search-form {
@@ -57,6 +67,7 @@
   height: 4vh;
   border: 1px solid lightgray;
   margin: 0.5vh;
+  border-radius: 4vw;
 }
 
 .search-button {
@@ -64,6 +75,7 @@
   height: 4.1vh;
   border: 1px solid lightgray;
   margin: 0.5vh;
+  border-radius: 0.5vw;
 }
 
 #footer__image {
