@@ -10,43 +10,40 @@ export default function Category(props) {
   const newsApi = new NewsApi();
 
   useEffect(() => {
-    if(categ) {
+    if (categ) {
       newsApi.getNewsByCategory(categ).then((resp) => {
         console.log("RESPONSE", resp.data.articles);
         setNews(resp.data.articles);
       });
     }
 
-    if(term) {
+    if (term) {
       newsApi.search(term).then((resp) => {
         console.log("RESPONSE", resp.data.articles);
         setNews(resp.data.articles);
       });
     }
     // eslint-disable-next-line
-  },[]);
+  }, []);
 
   const renderTerm = () => {
-    let label = ""
+    let label = "";
 
-    if(categ) {
-      label = `Category ${categ}`
+    if (categ) {
+      label = `Category ${categ}`;
     }
 
-    if(term) {
-      label = `Search by ${term}`
+    if (term) {
+      label = `Search by ${term}`;
     }
 
-    return label
-  }
+    return label;
+  };
 
   return (
     <div>
-    <CategoriesBar />
-      <div>
-        <h2 className="category-upper">{renderTerm()}:</h2>
-        <br/>
-      </div>
+      <CategoriesBar />
+      <h2 className="category-upper">{renderTerm()}:</h2>
       <div className="all__news">
         {news
           ? news.map((item) => (
