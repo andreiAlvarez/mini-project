@@ -96,6 +96,7 @@ h5 {
 /****** Footer *******/
 
 #footer__image {
+  margin-top: 1vh;
   width: 100vw;
   height: auto;
 }
@@ -230,4 +231,25 @@ font-weight: 500;
   margin-top: 1vh;
   width: 100vw;
   height: auto;
+}
+
+/****** Details *******/
+
+.details__title {
+  margin: 1vh 1vh;
+}
+
+.details__desc {
+  margin-left: 1vh;
+}
+
+.details__author {
+  margin-left: 2vw;
+  color: rgb(94, 94, 185);
+  font-weight: 300;
+}
+
+.details a {
+  margin-left: 2vw;
+font-weight: 500;
 }
