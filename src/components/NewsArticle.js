@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import slugify from "slugify";
 import headerImage from "../images/No_image_available.png";
 import Moment from "react-moment";
 
 function NewsArticle({ data, setSelectedNews, history }) {
   console.log(data);
+
+  let linkedHandle = data?.url;
 
   return (
     <div className="news">
@@ -15,9 +15,9 @@ function NewsArticle({ data, setSelectedNews, history }) {
         </span>
       </div>
       <div className="news-everything">
-        <Link to={`/details/${slugify(data.title)}`}>
+        <a href={linkedHandle} target="_blank" rel="noopener noreferrer">
           <h1 className="news__title">{data.title}</h1>
-        </Link>
+        </a>
         <p className="news__desc">{data.description}</p>
         <span className="news__author">{data.author}</span> <br />
         <span className="news__source">{data.source.name}</span>
