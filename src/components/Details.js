@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NewsContext } from "../NewsContext";
 import slugify from "slugify";
-import headerImage from "../images/Ironhack Post.png";
+import headerImage from "../images/No_image_available.png";
 
 export default function Details({ match, history, location, setSelectedNews }) {
   const { data } = useContext(NewsContext);

@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import slugify from "slugify";
+import headerImage from "../images/No_image_available.png";
 
 export function Headline({ data }) {
   console.log(data);
+  
   return (
     <div className="news__headlines">
       <div>
-        <img className="headlines__image" src={data.urlToImage} alt="new"></img>
+        <img className="headlines__image"  src={data.urlToImage ? data.urlToImage : headerImage} alt="new"></img>
       </div>
       <div className="news__everything__headlines">
         <Link to={`/details/${slugify(data.title)}`}>

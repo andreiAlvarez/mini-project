@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import slugify from "slugify";
-import headerImage from "../images/Ironhack Post.png";
+import headerImage from "../images/No_image_available.png";
 import Moment from "react-moment";
 
 function NewsArticle({ data, setSelectedNews, history }) {
