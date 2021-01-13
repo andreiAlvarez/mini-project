@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
 
-export default function Header() {
+export default function Header(props) {
   const [search, setSearch] = useState("");
   let dateCreate = moment().format("ddd, MMMM DD, YYYY");
+  console.log(props);
 
   const handleChange = (event) => {
     setSearch(event.target.value);

@@ -7,11 +7,13 @@ import News from "./components/News";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CategoriesBar from "./components/CategoriesBar";
 
 function App() {
   return (
     <div>
       <Header />
+      <CategoriesBar />
       <NewsContextProvider>
         <Switch>
           <Route exact path="/" component={News} />
@@ -20,7 +22,7 @@ function App() {
           <Route path="/details/:url" component={Details} />
         </Switch>
       </NewsContextProvider>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

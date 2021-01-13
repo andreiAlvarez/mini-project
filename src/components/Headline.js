@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import slugify from "slugify"
+import slugify from "slugify";
 
 export function Headline({ data }) {
   console.log(data);

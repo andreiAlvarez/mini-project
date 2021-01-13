@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NewsContext } from "../NewsContext";
 import { Headline } from "./Headline";
-import CategoriesBar from "./CategoriesBar";
+// import CategoriesBar from "./CategoriesBar";
 
 function News(props) {
   const { data } = useContext(NewsContext);
@@ -9,7 +9,7 @@ function News(props) {
 
   return (
     <div>
-      <CategoriesBar />
+      {/* <CategoriesBar /> */}
       <div className="all__news">
         {data
           ? data.articles.map((news) =>

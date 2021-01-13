@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NewsArticle from "./NewsArticle";
 import NewsApi from "../services/NewsApi";
-import CategoriesBar from "./CategoriesBar";
 
 export default function Category(props) {
   let { categ, term } = useParams();
@@ -42,7 +41,6 @@ export default function Category(props) {
 
   return (
     <div>
-      <CategoriesBar />
       <h2 className="category-upper">{renderTerm()}:</h2>
       <div className="all__news">
         {news

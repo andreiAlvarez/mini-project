@@ -6,7 +6,7 @@ export default class NewsApi {
 
   getNews = () => {
     return axios.get(
-        `http://newsapi.org/v2/top-headlines?country=us&from=2020-10-21&sortBy=publishedAt&apiKey=${this.apiKey}`
+        `http://newsapi.org/v2/top-headlines?country=us&from=2020-12-21&sortBy=publishedAt&apiKey=${this.apiKey}`
       );
   }
 
