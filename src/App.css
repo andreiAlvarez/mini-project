@@ -208,7 +208,7 @@ time {
 
 .news__title {
   width: 96vw;
-  font-size: 8vw;
+  font-size: 6vw;
   padding-bottom: 0.5vw;
   margin: 2vw;
 }
@@ -262,3 +262,39 @@ time {
   margin-left: 2vw;
   font-weight: 500;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .newspaper-head {
+    width: 53vw;
+    font-size: 4vh;
+  }
+
+  .logo {
+    width: 53vw;
+  }
+
+  .date {
+    width: 25vw;
+    font-size: 2vh;
+  }
+
+  .search-input {
+    height: 40px;
+    border-radius: 28px;
+    width: 23vw;
+  }
+
+  .search-form {
+    width: 22vw;
+  }
+
+  .news__title {
+    font-size: 4vw;
+  }
+
+  .news__title__head {
+    font-size: 3vh;
+  }
+
+  }
