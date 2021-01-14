@@ -1,6 +1,7 @@
-* {
+html {
   margin: 0;
   padding: 0;
+  width: 100vw;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -8,20 +9,21 @@
 
 .header {
   width: 100vw;
-  height: auto;
+  height: 16vh;
   display: flex;
   flex-direction: column;
-  padding-top: 3vh;
+  padding-top: 0vh;
   padding-bottom: 1vh;
   align-items: center;
   background-image: url("./images/News-header.jpg");
   background-size: cover;
-  
+
 }
 
 .newspaper-head {
+  margin: 0;
+  width: 80vw;
   color: rgb(255, 255, 255);
-  text-transform: none;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 8vw;
   font-weight: 500;
@@ -29,12 +31,10 @@
 }
 
 .logo {
-text-decoration: none;
-}
-
-.header-one {
-  display: flex;
-  justify-content: center;
+  margin-top: 2vh;
+  width: 80vw;
+  height: 7vh;
+  text-decoration: none;
 }
 
 #header__image {
@@ -44,32 +44,30 @@ text-decoration: none;
 }
 
 .date {
-  width: 50vw;
-  font-size: 5vw;
+  margin: 0;
+  width: 41vw;
+  font-size: 4vw;
   padding-bottom: 1vh;
   color: rgb(255, 255, 255);
   font-weight: 300;
 }
 
 .search-form {
-  width: 50vw;
   height: 5.2vh;
   background-color: 1px solid lightgray;
   padding: 0.5vw;
-}
-
-.search-bar {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  width: 40vw;
 }
 
 .search-input {
-  width: 38vw;
-  height: 4vh;
+  width: 39vw;
+  height: 24px;
   border: 1px solid lightgray;
-  margin: 0.5vh;
-  border-radius: 4vw;
+  margin: -0.5vh;
+  border-radius: 15px;
 }
 
 .search-button {
@@ -77,20 +75,19 @@ text-decoration: none;
   height: 4.1vh;
   border: 1px solid lightgray;
   margin: 0.5vh;
-  border-radius: 0.5vw;
+  border-radius: 4vw;
+  background-color: rgb(133, 133, 235);
+  color: white;
+  position: absolute;
+  top: 12.88vh;
+  left: 55.1vw;
 }
 
 h5 {
   position: absolute;
-  bottom: 1vh;
-  left: 39vw;
-  font-size: 2vh;
-}
-
-.search-form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  bottom: 7vh;
+  left: 48vw;
+  font-size: 1.5vh;
 }
 
 /****** Footer *******/
@@ -102,9 +99,9 @@ h5 {
 }
 
 .footer {
-position: relative;
-text-align: center;
-color: white;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 /****** Categories Bar *******/
@@ -113,14 +110,16 @@ color: white;
   width: 100vw;
   height: auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-top: solid 1vh #cccccc;
   border-bottom: solid 1vh #cccccc;
 }
 
-.category-alone{
-  font-size: 1.45vh;
-  padding: 2vh 2vw;
+.category-alone {
+  margin: 0;
+  font-size: 1.2vh;
+  padding: 1vh 2vw;
 }
 
 .category-alone:hover {
@@ -136,11 +135,11 @@ color: white;
 /****** News Home *******/
 
 .all__news {
-    width: 100vw;
-    height: auto;
-    margin: 0vw;
-    display: flex;
-    flex-direction: column;
+  width: 100vw;
+  height: auto;
+  margin: 0vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .news__headlines {
@@ -169,6 +168,7 @@ color: white;
 }
 
 .news__desc__head {
+  width: 96vw;
   font-size: 2vh;
   margin: 1vh 0vh;
 }
@@ -186,6 +186,7 @@ color: white;
 .category-upper {
   margin-top: 1vh;
   margin-left: 2vw;
+  margin-bottom: 0;
   text-transform: capitalize;
 }
 
@@ -206,30 +207,38 @@ time {
 }
 
 .news__title {
+  width: 96vw;
   font-size: 8vw;
   padding-bottom: 0.5vw;
   margin: 2vw;
 }
 
 .news__desc {
- margin: 2vw;
- font-weight: 300;
-}  
+  width: 95vw;
+  margin: 2vw;
+  font-weight: 300;
+}
 
 .news__author {
- margin-left: 2vw;
- color: rgb(94, 94, 185);
- font-weight: 300;
+  margin-left: 2vw;
+  color: rgb(94, 94, 185);
+  font-weight: 300;
 }
 
 .news__source {
-margin-left: 2vw;
-font-weight: 500;
+  margin-left: 2vw;
+  font-weight: 500;
 }
 
 .news__image {
   margin-top: 1vh;
   width: 100vw;
+  height: auto;
+}
+
+.news__title__head {
+  margin: 0;
+  width: 94vw;
   height: auto;
 }
 
@@ -251,5 +260,5 @@ font-weight: 500;
 
 .details a {
   margin-left: 2vw;
-font-weight: 500;
+  font-weight: 500;
 }
