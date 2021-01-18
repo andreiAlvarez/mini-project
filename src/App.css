@@ -45,7 +45,7 @@ html {
 
 .date {
   margin: 0;
-  width: 41vw;
+  width: 42vw;
   font-size: 4vw;
   padding-bottom: 1vh;
   color: rgb(255, 255, 255);
@@ -275,7 +275,7 @@ time {
   }
 
   .date {
-    width: 25vw;
+    width: 26vw;
     font-size: 2vh;
   }
 
@@ -299,20 +299,42 @@ time {
 
   }
 
-  @media only screen and (min-width: 1024px){
+  @media only screen and (min-width: 1024px){ 
+
+    .news__image {
+      width: 60vw;
+  }
+    .category-upper {
+      width: 60vw;
+      margin-right: 20vw;
+      margin-left: 20vw;
+    }
+
+    .news {
+      width: 60vw;
+      margin-right: 20vw;
+      margin-left: 20vw;
+    }
+
+    .main-menu {
+      width: 60vw;
+      margin-right: 20vw;
+      margin-left: 20vw;
+    }
 
     .logo  {
-    width: 40vw;
+    width: 30vw;
     }
     
     .newspaper-head {
-      font-size: 4vw;
-      width: 40vw;
+      font-size: 3vw;
+      width: 30vw;
     }
 
     .date {
-      font-size: 1.5vw;
-      width: 15vw;
+      font-size: 1vw;
+      width: 11vw;
+      margin-top: 0vw;
     }
 
     .search-input {
@@ -325,11 +347,14 @@ time {
     }
 
     .header {
-      height: 132px;
+      margin-left: 20vw;
+      margin-right: 20vw;
+      width: 60vw;
+      height: 140px;
     }
 
     .category-alone {
-      font-size: 20px;
+      font-size: 6px;
       padding: 1.5vh 4vw;
     }
 
@@ -352,8 +377,35 @@ time {
       width: 45vw;
   }
 
+  .news__title {
+    font-size: 1.5vw;
+    width: 55vw;
+}
+
   .news__desc__head {
     width: 45vw;
     font-size: 19px;
+}
+
+.news__desc {
+  width: 55vw;
+  margin: 2vw;
+  font-weight: 300;
+}
+.footer {
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+#footer__image {
+  margin-top: 0;
+  width: 60vw;
+  height: auto;
+}
+
+h5 {
+  bottom: 7vh;
+  left: 40vw;
 }
     }
