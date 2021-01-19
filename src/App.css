@@ -312,8 +312,6 @@ time {
 
     .news {
       width: 60vw;
-      margin-right: 20vw;
-      margin-left: 20vw;
     }
 
     .main-menu {
@@ -354,27 +352,28 @@ time {
     }
 
     .category-alone {
-      font-size: 6px;
-      padding: 1.5vh 4vw;
+      font-size: 14px;
+      padding: 1.5vh 2vw;
     }
 
     .headlines__image {
-      width: 50vw;
+      width: 30vw;
     }
 
     .news__headlines {
+      width: 60vw;
       flex-direction: row;
     }
 
     .news__everything__headlines {
-      width: 46vw;
+      width: 26vw;
       margin: 2vw;
-      font-size: 2vw;
+      font-size: 1vw;
     }
 
     .news__title__head {
-      font-size: 21px;
-      width: 45vw;
+      font-size: 14px;
+      width: 26vw;
   }
 
   .news__title {
@@ -383,8 +382,8 @@ time {
 }
 
   .news__desc__head {
-    width: 45vw;
-    font-size: 19px;
+    width: 26vw;
+    font-size: 14px;
 }
 
 .news__desc {
@@ -407,5 +406,11 @@ time {
 h5 {
   bottom: 7vh;
   left: 40vw;
+}
+
+.all__news {
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
     }
