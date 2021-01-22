@@ -5,8 +5,10 @@ import NewsApi from "../services/NewsApi";
 
 export default function Category(props) {
   let { categ, term } = useParams();
-  const [news, setNews, setSelectedNews] = useState([]);
+  const [news, setNews, setSelectedNews ] = useState([]);
   const newsApi = new NewsApi();
+  console.log(categ);
+
 
   useEffect(() => {
     if (categ) {

@@ -361,6 +361,7 @@ time {
     }
 
     .news__headlines {
+      margin-top: 3vh;
       width: 60vw;
       flex-direction: row;
     }
