@@ -5,7 +5,7 @@ const options = {
   url: 'https://newscatcher.p.rapidapi.com/v1/sources',
   params: {lang: 'en'},
   headers: {
-    'x-rapidapi-key': '8ebcd57999msh40f3b4733b5eb35p190cdejsn3698e606371c',
+    'x-rapidapi-key': 'process.env.RAPID_API_KEY',
     'x-rapidapi-host': 'newscatcher.p.rapidapi.com'
   }
 };
